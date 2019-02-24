@@ -1,6 +1,6 @@
 # This codebook contains relevant information about the data and variables used/generated in run_analysis.R
 
-After downloading and extracting data. Input data is loaded into following dataFrames
+After downloading and extracting data. Input data is loaded into following dataFrames. For this step one can manually do download and extracting but in run_analysis.R it is done for you. load libraries dplyr and Hmisc
 
 *featuresList*: list of all 561 features
 
