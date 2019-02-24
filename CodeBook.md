@@ -23,9 +23,10 @@ Step 1. Merge train and test data using rbind and put into
 Combined_subject,
 Combined_activity*
 
-Step 2. i. Change *Combine_activity* data from labels to descriptions. use mutate and then drop 
+Step 2. 
+i. Change *Combine_activity* data from labels to descriptions. use mutate and then drop 
 
-        ii. Create an array that contains all subject ids
+ii. Create an array that contains all subject ids
         
 Step 3. Extract columns from the *Combine_features* with mean and std. deviation data for all features. Use grep with "mean|std" 
 and remember to exclude meanFreq as first grep will take meanFreq as well. Save the list of column names in *MeanStd_Features*. 
@@ -36,5 +37,4 @@ Step 4. Add columns for subject_id and Activity in *MeanStd_data* using cbind
 Step 5. Group the *MeanStd_Data* by Activity and subjects using group_by and create *activity_group*. Finally use summarise_all with inputs 
 as grouped data in *activity_group* and  function *mean* to calculate mean for each feature, subject and activity pair. The final tidy 
 dataset is saved in *Tidy_data*. 
-## Tidy_data contains 68 features 1. activity, 2. subject_id, 3:68. features for which mean and std was extracted. It contain 180 rows
-of activity-subject pairs and mean calculated over features data.
+## Tidy_data contains 68 features 1. activity, 2. subject_id, 3:68. features for which mean and std was extracted. It contain 180 row of activity-subject pairs and mean calculated over features data.
