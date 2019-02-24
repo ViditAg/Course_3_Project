@@ -44,3 +44,4 @@ activity_group<-group_by(MeanStd_Data,Activity,subject_id)
 # This final data is for each Activity and subject
 #And I calculated mean for each of the 66 features
 Tidy_data<-summarise_all(activity_group,mean)
+write.table(Tidy_data,file="Tidy_data.txt",row.name=FALSE)
